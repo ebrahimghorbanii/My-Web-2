@@ -6,7 +6,7 @@
     <title>Social Links</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap');
-        
+
         body {
             background-color: #000;
             color: #fff;
@@ -14,11 +14,12 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             flex-direction: column;
             text-align: center;
+            padding: 20px;
         }
-        
+
         h1 {
             font-size: 3rem;
             font-weight: 600;
@@ -26,30 +27,53 @@
             opacity: 0;
             animation: fadeIn 1.5s ease-in-out forwards;
         }
-        
+
         .links {
             margin-top: 20px;
             display: flex;
+            flex-wrap: wrap;
             gap: 20px;
+            justify-content: center;
             opacity: 0;
             animation: fadeIn 2s ease-in-out forwards 0.5s;
         }
-        
+
         .links a {
             text-decoration: none;
             color: #fff;
             font-size: 1.5rem;
             transition: transform 0.3s ease, color 0.3s ease;
+            padding: 10px 20px;
+            border: 2px solid #fff;
+            border-radius: 10px;
         }
-        
+
         .links a:hover {
-            transform: scale(1.2);
+            transform: scale(1.1);
             color: #00bcd4;
+            border-color: #00bcd4;
         }
-        
+
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(-20px); }
             to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* استایل مخصوص موبایل */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .links {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .links a {
+                font-size: 1.2rem;
+                padding: 8px 16px;
+            }
         }
     </style>
 </head>
@@ -57,10 +81,9 @@
     <h1>Find Me Online</h1>
     <div class="links">
         <a href="https://www.linkedin.com/in/ebrahim-ghorbani" target="_blank">LinkedIn</a>
-        <a href="https://youtube.com/@ebrahimghorbanii?si=BYlamz_jPLGdPn-Z">YouTube</a>
-        <a href="#https://www.instagram.com/concreteexpert_ebrahim/">Instagram</a>
+        <a href="https://youtube.com/@ebrahimghorbanii?si=BYlamz_jPLGdPn-Z" target="_blank">YouTube</a>
+        <a href="https://www.instagram.com/concreteexpert_ebrahim/" target="_blank">Instagram</a>
         <a href="https://mail.google.com/mail/?view=cm&to=ghorbani.e@gmail.com" target="_blank">GMail</a>
-
     </div>
 </body>
 </html>
